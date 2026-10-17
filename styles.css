@@ -1,0 +1,77 @@
+
+:root {
+  --fondo: #0f0f12;
+  --fondo-menu: #1a1a20;
+  --texto: #e8e8e8;
+  --texto-suave: #b5b5bd;
+  --acento: #f5c518;       /* dorado */
+  --acento-oscuro: #8f1d1d; /* rojo oscuro */
+  --fuente-titulos: 'Oswald', sans-serif;
+  --fuente-texto: 'Roboto', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #1f1f28 0%, var(--fondo) 60%);
+  background-attachment: fixed;
+  color: var(--texto);
+  font-family: var(--fuente-texto);
+  min-height: 100vh;
+}
+
+.navbar {
+  background: var(--fondo-menu);
+  border-bottom: 2px solid var(--acento);
+}
+
+.navbar .nav-link {
+  font-family: var(--fuente-titulos);
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--texto);
+  padding: 1rem 1.25rem;
+  transition: color 0.2s, background 0.2s;
+}
+
+.navbar .nav-link.active {
+  color: var(--acento);
+}
+
+.navbar .nav-link:hover {
+  color: var(--acento);
+  background: rgba(245, 197, 24, 0.08);
+}
+
+.titulo {
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--acento);
+  text-shadow: 3px 3px 0 var(--acento-oscuro);
+}
+
+.subtitulo {
+  font-family: var(--fuente-texto);
+  font-weight: 400;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: var(--texto-suave);
+}
+
+.imagen-placeholder {
+  max-width: 800px;
+  height: 400px;
+}
+
+.imagen-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 576px) {
+  .imagen-placeholder {
+    height: 250px;
+  }
+}
